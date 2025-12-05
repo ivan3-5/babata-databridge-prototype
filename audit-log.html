@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Log - BABAta DataBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo" class="brand-logo"> <div class="logo-text">BABAta <span class="highlight">DataBridge</span></div></a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><span class="icon"><img src="icons/home.svg" class="icon"></span><span class="label">Dashboard</span></a></li>
+                    <li><a href="beneficiary-list.html"><span class="icon"><img src="icons/users.svg" class="icon"></span><span class="label">Beneficiaries</span></a></li>
+                    <li><a href="messages.html"><span class="icon"><img src="icons/message-square.svg" class="icon"></span><span class="label">Messages</span></a></li>
+                    <li><a href="calendar.html"><span class="icon"><img src="icons/calendar.svg" class="icon"></span><span class="label">Calendar</span></a></li>
+                    <li><a href="reports.html"><span class="icon"><img src="icons/bar-chart-2.svg" class="icon"></span><span class="label">Reports</span></a></li>
+                    <li><a href="team-management.html"><span class="icon"><img src="icons/briefcase.svg" class="icon"></span><span class="label">Team</span></a></li>
+                    <li><a href="import-export.html"><span class="icon"><img src="icons/refresh-cw.svg" class="icon"></span><span class="label">Import/Export</span></a></li>
+                    <li><a href="audit-log.html" class="active"><span class="icon"><img src="icons/shield.svg" class="icon"></span><span class="label">Audit Log</span></a></li>
+                    <li><a href="help-center.html"><span class="icon"><img src="icons/help-circle.svg" class="icon"></span><span class="label">Help</span></a></li>
+                    <li><a href="profile.html"><span class="icon"><img src="icons/settings.svg" class="icon"></span><span class="label">Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-link"><span class="icon"><img src="icons/log-out.svg" class="icon"></span><span class="label">Logout</span></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-title"><h2>System Audit Log</h2></div>
+                <div class="header-actions">
+                    <a href="notifications.html" class="icon-btn"><img src="icons/bell.svg" class="icon"></a>
+                    <div class="user-profile-mini"><img src="https://ui-avatars.com/api/?name=John+Doe&background=2563eb&color=fff" alt="User"></div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Stats Overview -->
+                <div class="kpi-grid" style="margin-bottom: 30px;">
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-blue"><img src="icons/shield.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Total Events</h3>
+                            <p class="kpi-value">15,248</p>
+                            <span class="kpi-trend positive">↑ 120 today</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-green"><img src="icons/check.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Successful Actions</h3>
+                            <p class="kpi-value">15,102</p>
+                            <span class="kpi-trend positive">99.1% success rate</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-purple"><img src="icons/alert-circle.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Security Alerts</h3>
+                            <p class="kpi-value">3</p>
+                            <span class="kpi-trend neutral">No critical threats</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-controls">
+                    <div class="search-bar">
+                        <span class="search-icon"><img src="icons/search.svg" class="icon"></span>
+                        <input type="text" placeholder="Search logs...">
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary btn-sm" style="display: flex; align-items: center; gap: 8px;">
+                            <img src="icons/filter.svg" class="icon" style="width: 16px; height: 16px;"> Filter
+                        </button>
+                        <button class="btn btn-secondary btn-sm" style="display: flex; align-items: center; gap: 8px;">
+                            <img src="icons/download.svg" class="icon" style="width: 16px; height: 16px;"> Export
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>User</th>
+                                <th>Action</th>
+                                <th>Resource</th>
+                                <th>IP Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-family: monospace; font-size: 0.85rem;">2025-12-05 10:42:15</td>
+                                <td>John Doe</td>
+                                <td><span class="badge badge-active">LOGIN</span></td>
+                                <td>System</td>
+                                <td>192.168.1.1</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: monospace; font-size: 0.85rem;">2025-12-05 09:30:00</td>
+                                <td>Alice Smith</td>
+                                <td><span class="badge badge-pending">UPDATE</span></td>
+                                <td>Beneficiary #BN-002</td>
+                                <td>192.168.1.45</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: monospace; font-size: 0.85rem;">2025-12-04 16:15:22</td>
+                                <td>John Doe</td>
+                                <td><span class="badge badge-graduated">EXPORT</span></td>
+                                <td>Monthly_Report.pdf</td>
+                                <td>192.168.1.1</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: monospace; font-size: 0.85rem;">2025-12-04 14:20:10</td>
+                                <td>Bob Jones</td>
+                                <td><span class="badge badge-active">VIEW</span></td>
+                                <td>Beneficiary #BN-001</td>
+                                <td>10.0.0.5</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: monospace; font-size: 0.85rem;">2025-12-04 11:05:00</td>
+                                <td>System</td>
+                                <td><span class="badge badge-graduated">BACKUP</span></td>
+                                <td>Database</td>
+                                <td>localhost</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

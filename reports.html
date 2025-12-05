@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - BABAta DataBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo" class="brand-logo"> <div class="logo-text">BABAta <span class="highlight">DataBridge</span></div></a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><span class="icon"><img src="icons/home.svg" class="icon"></span><span class="label">Dashboard</span></a></li>
+                    <li><a href="beneficiary-list.html"><span class="icon"><img src="icons/users.svg" class="icon"></span><span class="label">Beneficiaries</span></a></li>
+                    <li><a href="messages.html"><span class="icon"><img src="icons/message-square.svg" class="icon"></span><span class="label">Messages</span></a></li>
+                    <li><a href="calendar.html"><span class="icon"><img src="icons/calendar.svg" class="icon"></span><span class="label">Calendar</span></a></li>
+                    <li><a href="reports.html" class="active"><span class="icon"><img src="icons/bar-chart-2.svg" class="icon"></span><span class="label">Reports</span></a></li>
+                    <li><a href="team-management.html"><span class="icon"><img src="icons/briefcase.svg" class="icon"></span><span class="label">Team</span></a></li>
+                    <li><a href="import-export.html"><span class="icon"><img src="icons/refresh-cw.svg" class="icon"></span><span class="label">Import/Export</span></a></li>
+                    <li><a href="audit-log.html"><span class="icon"><img src="icons/shield.svg" class="icon"></span><span class="label">Audit Log</span></a></li>
+                    <li><a href="help-center.html"><span class="icon"><img src="icons/help-circle.svg" class="icon"></span><span class="label">Help</span></a></li>
+                    <li><a href="profile.html"><span class="icon"><img src="icons/settings.svg" class="icon"></span><span class="label">Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-link"><span class="icon"><img src="icons/log-out.svg" class="icon"></span><span class="label">Logout</span></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-title">
+                    <h2>Analytics & Reports</h2>
+                </div>
+                <div class="header-actions">
+                    <a href="notifications.html" class="icon-btn"><img src="icons/bell.svg" class="icon"></a>
+                    <div class="user-profile-mini">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=2563eb&color=fff" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Stats Overview -->
+                <div class="kpi-grid" style="margin-bottom: 30px;">
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-blue"><img src="icons/file-text.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Total Reports Generated</h3>
+                            <p class="kpi-value">1,248</p>
+                            <span class="kpi-trend positive">↑ 12% this month</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-green"><img src="icons/upload-cloud.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Data Exports (This Month)</h3>
+                            <p class="kpi-value">85</p>
+                            <span class="kpi-trend positive">↑ 5% vs last month</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-purple"><img src="icons/pie-chart.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Analytics Views</h3>
+                            <p class="kpi-value">3,402</p>
+                            <span class="kpi-trend neutral">− 1% vs last week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <!-- Chart 1: Beneficiary Growth -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Beneficiary Growth</h3>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 40%;" data-value="40%"></div>
+                                <span class="chart-label">Jun</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 55%;" data-value="55%"></div>
+                                <span class="chart-label">Jul</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 45%;" data-value="45%"></div>
+                                <span class="chart-label">Aug</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 70%;" data-value="70%"></div>
+                                <span class="chart-label">Sep</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 60%;" data-value="60%"></div>
+                                <span class="chart-label">Oct</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 85%;" data-value="85%"></div>
+                                <span class="chart-label">Nov</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2: Report Types -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Report Types Distribution</h3>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 65%; background-color: #7c3aed;" data-value="65%"></div>
+                                <span class="chart-label">Fin</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 45%; background-color: #2563eb;" data-value="45%"></div>
+                                <span class="chart-label">Ops</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 80%; background-color: #16a34a;" data-value="80%"></div>
+                                <span class="chart-label">Imp</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 30%; background-color: #ea580c;" data-value="30%"></div>
+                                <span class="chart-label">HR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Exports List -->
+                <div class="section-container" style="margin-top: 30px;">
+                    <div class="section-header-small" style="margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #0f172a;">Recent Exports</h3>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon blue">
+                                <img src="icons/file-text.svg" class="icon" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="activity-content">
+                                <h4>Monthly_Summary.pdf</h4>
+                                <p>Financial and operational summary for October.</p>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <span class="activity-time">Oct 24, 2023</span>
+                                <button class="icon-btn" style="color: var(--primary-color);"><img src="icons/download.svg" class="icon" style="width: 18px; height: 18px;"></button>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon green">
+                                <img src="icons/file.svg" class="icon" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="activity-content">
+                                <h4>Beneficiaries_List.csv</h4>
+                                <p>Full list of active beneficiaries.</p>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <span class="activity-time">Oct 22, 2023</span>
+                                <button class="icon-btn" style="color: var(--primary-color);"><img src="icons/download.svg" class="icon" style="width: 18px; height: 18px;"></button>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon orange">
+                                <img src="icons/pie-chart.svg" class="icon" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="activity-content">
+                                <h4>Q3_Financials.xlsx</h4>
+                                <p>Quarterly financial report.</p>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <span class="activity-time">Oct 15, 2023</span>
+                                <button class="icon-btn" style="color: var(--primary-color);"><img src="icons/download.svg" class="icon" style="width: 18px; height: 18px;"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary btn-block" style="margin-top: 20px;">View All Exports</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

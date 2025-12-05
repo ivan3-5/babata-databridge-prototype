@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BABAta DataBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo" class="brand-logo"> <div class="logo-text">BABAta <span class="highlight">DataBridge</span></div></a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active"><span class="icon"><img src="icons/home.svg" class="icon"></span><span class="label">Dashboard</span></a></li>
+                    <li><a href="beneficiary-list.html"><span class="icon"><img src="icons/users.svg" class="icon"></span><span class="label">Beneficiaries</span></a></li>
+                    <li><a href="messages.html"><span class="icon"><img src="icons/message-square.svg" class="icon"></span><span class="label">Messages</span></a></li>
+                    <li><a href="calendar.html"><span class="icon"><img src="icons/calendar.svg" class="icon"></span><span class="label">Calendar</span></a></li>
+                    <li><a href="reports.html"><span class="icon"><img src="icons/bar-chart-2.svg" class="icon"></span><span class="label">Reports</span></a></li>
+                    <li><a href="team-management.html"><span class="icon"><img src="icons/briefcase.svg" class="icon"></span><span class="label">Team</span></a></li>
+                    <li><a href="import-export.html"><span class="icon"><img src="icons/refresh-cw.svg" class="icon"></span><span class="label">Import/Export</span></a></li>
+                    <li><a href="audit-log.html"><span class="icon"><img src="icons/shield.svg" class="icon"></span><span class="label">Audit Log</span></a></li>
+                    <li><a href="help-center.html"><span class="icon"><img src="icons/help-circle.svg" class="icon"></span><span class="label">Help</span></a></li>
+                    <li><a href="profile.html"><span class="icon"><img src="icons/settings.svg" class="icon"></span><span class="label">Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-link"><span class="icon"><img src="icons/log-out.svg" class="icon"></span><span class="label">Logout</span></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Glassmorphism Header -->
+            <header class="dashboard-header">
+                <div class="header-title">
+                    <h2>Overview</h2>
+                </div>
+                <div class="header-actions">
+                    <a href="notifications.html" class="icon-btn"><img src="icons/bell.svg" class="icon"></a>
+                    <div class="user-profile-mini">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=2563eb&color=fff" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content-wrapper">
+                <!-- KPI Cards -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-blue"><img src="icons/users.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Total Beneficiaries</h3>
+                            <p class="kpi-value">1,248</p>
+                            <span class="kpi-trend positive">↑ 12% this month</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-green"><img src="icons/zap.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Active Cases</h3>
+                            <p class="kpi-value">856</p>
+                            <span class="kpi-trend positive">↑ 5% this week</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon icon-purple"><img src="icons/bar-chart-2.svg" class="icon"></div>
+                        <div class="kpi-info">
+                            <h3>Reports Generated</h3>
+                            <p class="kpi-value">142</p>
+                            <span class="kpi-trend neutral">− 2% vs last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Beneficiary Growth</h3>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 40%;" data-value="40%"></div>
+                                <span class="chart-label">Jan</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 65%;" data-value="65%"></div>
+                                <span class="chart-label">Feb</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 50%;" data-value="50%"></div>
+                                <span class="chart-label">Mar</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 85%;" data-value="85%"></div>
+                                <span class="chart-label">Apr</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 70%;" data-value="70%"></div>
+                                <span class="chart-label">May</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Case Status Distribution</h3>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 30%; background-color: #16a34a;" data-value="30%"></div>
+                                <span class="chart-label">New</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 55%; background-color: #2563eb;" data-value="55%"></div>
+                                <span class="chart-label">Active</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 45%; background-color: #ea580c;" data-value="45%"></div>
+                                <span class="chart-label">Pending</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 80%; background-color: #7c3aed;" data-value="80%"></div>
+                                <span class="chart-label">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="section-container" style="margin-top: 30px;">
+                    <div class="section-header-small" style="margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #0f172a;">Recent Activity</h3>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon blue">
+                                <img src="icons/users.svg" class="icon" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="activity-content">
+                                <h4>New Beneficiary Added</h4>
+                                <p>Sarah Johnson was added to the system.</p>
+                            </div>
+                            <span class="activity-time">2 mins ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon green">
+                                <img src="icons/check-circle.svg" class="icon" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="activity-content">
+                                <h4>Case #482 Resolved</h4>
+                                <p>The assistance request for Michael Brown has been completed.</p>
+                            </div>
+                            <span class="activity-time">1 hour ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon orange">
+                                <img src="icons/alert-circle.svg" class="icon" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="activity-content">
+                                <h4>Pending Approval</h4>
+                                <p>New grant application requires manager review.</p>
+                            </div>
+                            <span class="activity-time">3 hours ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon purple">
+                                <img src="icons/file-text.svg" class="icon" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="activity-content">
+                                <h4>Monthly Report Generated</h4>
+                                <p>System automatically generated the May 2023 performance report.</p>
+                            </div>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
