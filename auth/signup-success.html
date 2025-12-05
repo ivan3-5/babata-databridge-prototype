@@ -5,22 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success - BABAta DataBridge</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/background-animation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="auth-body">
-    <div class="auth-container">
-        <div class="auth-card success-card">
-            <div class="success-icon">
-                🎉
+    <div class="auth-split-layout">
+        <!-- Left Panel: Information & Animation -->
+        <div class="auth-left-panel">
+            <!-- Background Animation -->
+            <div class="bg-animation-container">
+                <div class="bg-anim-layer-1"></div>
+                <div class="bg-anim-layer-2"></div>
+                <div class="bg-anim-layer-3"></div>
+                <div class="bg-anim-layer-4"></div>
             </div>
-            <h2>Account Created!</h2>
-            <p>Your account has been successfully created. You can now access the BABAta DataBridge platform.</p>
+
+            <div class="auth-logo-container" style="position: absolute; top: 40px; left: 40px; z-index: 10;">
+                <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Logo" class="brand-logo"> <div class="logo-text">BABAta <span class="highlight">DataBridge</span></div></a>
+            </div>
             
-            <div class="success-actions">
-                <a href="login.html" class="btn btn-primary btn-block">Proceed to Login</a>
-                <a href="../index.html" class="btn btn-secondary btn-block">Back to Home</a>
+            <div class="auth-left-content">
+                <div class="auth-page-indicator">Success</div>
+                <h1>Welcome Aboard!</h1>
+                <p>Your journey with BABAta DataBridge begins now. We're excited to have you with us.</p>
+            </div>
+        </div>
+
+        <!-- Right Panel: Success Message -->
+        <div class="auth-right-panel">
+            <div class="auth-right-content">
+                <div class="auth-card success-card">
+                    <div class="success-icon">
+                        🎉
+                    </div>
+                    <h2>Account Created!</h2>
+                    <p>Your account has been successfully created. You can now access the BABAta DataBridge platform.</p>
+                    
+                    <div class="success-actions">
+                        <a href="login.html" class="btn btn-primary btn-block">Proceed to Login</a>
+                        <a href="../index.html" class="btn btn-secondary btn-block">Back to Home</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

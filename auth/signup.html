@@ -5,39 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - BABAta DataBridge</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/background-animation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="auth-body">
-    <div class="auth-container">
-        <div class="auth-card">
-            <div class="auth-header">
-                <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Logo" class="brand-logo"> <div class="logo-text">BABAta <span class="highlight">DataBridge</span></div></a>
-                <h2>Create Account</h2>
-                <p>Start managing your data infrastructure today</p>
+    <div class="auth-split-layout">
+        <!-- Left Panel: Information & Animation -->
+        <div class="auth-left-panel">
+            <!-- Background Animation -->
+            <div class="bg-animation-container">
+                <div class="bg-anim-layer-1"></div>
+                <div class="bg-anim-layer-2"></div>
+                <div class="bg-anim-layer-3"></div>
+                <div class="bg-anim-layer-4"></div>
             </div>
-            <form class="auth-form" action="signup-success.html">
-                <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="John Doe">
+
+            <div class="auth-logo-container" style="position: absolute; top: 40px; left: 40px; z-index: 10;">
+                <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Logo" class="brand-logo"> <div class="logo-text">BABAta <span class="highlight">DataBridge</span></div></a>
+            </div>
+            
+            <div class="auth-left-content">
+                <div class="auth-page-indicator">Sign Up</div>
+                <h1>Join BABAta DataBridge</h1>
+                <p>Create your account to start managing your projects efficiently and collaborating with your team.</p>
+            </div>
+        </div>
+
+        <!-- Right Panel: Inputs -->
+        <div class="auth-right-panel">
+            <div class="auth-right-content">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2>Create Account</h2>
+                        <p>Start managing your data infrastructure today</p>
+                    </div>
+                    <form class="auth-form" action="signup-success.html">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Juan dela Cruz">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="name@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Create a password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="login.html">Sign in</a></p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="name@company.com">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Create a password">
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
-            </form>
-            <div class="auth-footer">
-                <p>Already have an account? <a href="login.html">Sign in</a></p>
             </div>
         </div>
     </div>

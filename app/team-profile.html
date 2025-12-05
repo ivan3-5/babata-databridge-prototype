@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profile - BABAta DataBridge</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Logo" class="brand-logo"> <div class="logo-text">BABAta <span class="highlight">DataBridge</span></div></a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><span class="icon"><img src="../assets/icons/home.svg" class="icon"></span><span class="label">Dashboard</span></a></li>
+                    <li><a href="beneficiary-list.html"><span class="icon"><img src="../assets/icons/users.svg" class="icon"></span><span class="label">Beneficiaries</span></a></li>
+                    <li><a href="messages.html"><span class="icon"><img src="../assets/icons/message-square.svg" class="icon"></span><span class="label">Messages</span></a></li>
+                    <li><a href="calendar.html"><span class="icon"><img src="../assets/icons/calendar.svg" class="icon"></span><span class="label">Calendar</span></a></li>
+                    <li><a href="reports.html"><span class="icon"><img src="../assets/icons/bar-chart-2.svg" class="icon"></span><span class="label">Reports</span></a></li>
+                    <li><a href="team-management.html" class="active"><span class="icon"><img src="../assets/icons/briefcase.svg" class="icon"></span><span class="label">Team</span></a></li>
+                    <li><a href="import-export.html"><span class="icon"><img src="../assets/icons/refresh-cw.svg" class="icon"></span><span class="label">Import/Export</span></a></li>
+                    <li><a href="audit-log.html"><span class="icon"><img src="../assets/icons/shield.svg" class="icon"></span><span class="label">Audit Log</span></a></li>
+                    <li><a href="help-center.html"><span class="icon"><img src="../assets/icons/help-circle.svg" class="icon"></span><span class="label">Help</span></a></li>
+                    <li><a href="profile.html"><span class="icon"><img src="../assets/icons/settings.svg" class="icon"></span><span class="label">Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../index.html" class="logout-link"><span class="icon"><img src="../assets/icons/log-out.svg" class="icon"></span><span class="label">Logout</span></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-title">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <a href="team-management.html" class="icon-btn"><img src="../assets/icons/arrow-left.svg" class="icon"></a>
+                        <h2>Team Member Profile</h2>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="notifications.html" class="icon-btn"><img src="../assets/icons/bell.svg" class="icon"></a>
+                    <div class="user-profile-mini">
+                        <img src="https://ui-avatars.com/api/?name=Juan+dela+Cruz&background=2563eb&color=fff" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 24px;">
+                    <!-- Profile Card -->
+                    <div class="form-card" style="text-align: center;">
+                        <div class="profile-avatar-wrapper">
+                            <img src="https://ui-avatars.com/api/?name=Juan+dela+Cruz&background=10b981&color=fff&size=128" alt="Profile" class="profile-avatar" style="margin: 0 auto;">
+                        </div>
+                        <h2 style="margin-bottom: 5px;">Juan dela Cruz</h2>
+                        <p style="color: var(--secondary-color); margin-bottom: 15px;">Case Manager</p>
+                        <span class="status-badge status-active">Active</span>
+                        
+                        <div class="divider"></div>
+                        
+                        <div style="text-align: left;">
+                            <div style="margin-bottom: 15px;">
+                                <label style="font-size: 0.8rem; color: var(--secondary-color);">Email</label>
+                                <div style="font-weight: 500;">juan.delacruz@babata.com</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label style="font-size: 0.8rem; color: var(--secondary-color);">Phone</label>
+                                <div style="font-weight: 500;">+63 912 345 6789</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label style="font-size: 0.8rem; color: var(--secondary-color);">Location</label>
+                                <div style="font-weight: 500;">Tagum City, Philippines</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label style="font-size: 0.8rem; color: var(--secondary-color);">Joined Date</label>
+                                <div style="font-weight: 500;">Jan 15, 2025</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label style="font-size: 0.8rem; color: var(--secondary-color);">Department</label>
+                                <div style="font-weight: 500;">Social Services</div>
+                            </div>
+                        </div>
+                        
+                        <a href="edit-team-profile.html" class="btn btn-primary btn-block" style="margin-top: 20px;">Edit Profile</a>
+                    </div>
+
+                    <!-- Right Column: Stats & Activity -->
+                    <div>
+                        <!-- Performance Stats -->
+                        <div class="form-card" style="margin-bottom: 24px;">
+                            <h3 class="card-title">Performance Overview</h3>
+                            <div class="kpi-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                                <div class="kpi-card">
+                                    <div class="kpi-value">45</div>
+                                    <div class="kpi-label">Active Cases</div>
+                                </div>
+                                <div class="kpi-card">
+                                    <div class="kpi-value">98%</div>
+                                    <div class="kpi-label">Resolution Rate</div>
+                                </div>
+                                <div class="kpi-card">
+                                    <div class="kpi-value">12</div>
+                                    <div class="kpi-label">Reports Filed</div>
+                                </div>
+                                <div class="kpi-card">
+                                    <div class="kpi-value">4.8</div>
+                                    <div class="kpi-label">Rating</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Timeline -->
+                        <div class="form-card">
+                            <h3 class="section-title">Recent Activity</h3>
+                            <div class="timeline" style="position: relative; padding-left: 20px; border-left: 2px solid #f1f5f9;">
+                                <div class="timeline-item" style="margin-bottom: 30px; position: relative;">
+                                    <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; background: var(--primary-color); border-radius: 50%; border: 2px solid white;"></div>
+                                    <div style="font-size: 0.85rem; color: var(--secondary-color); margin-bottom: 4px;">Nov 24, 2025</div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 5px;">Updated Case File</h4>
+                                    <p style="color: #475569; font-size: 0.95rem;">Updated medical records for beneficiary Juan Santos.</p>
+                                </div>
+                                
+                                <div class="timeline-item" style="margin-bottom: 30px; position: relative;">
+                                    <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; background: #cbd5e1; border-radius: 50%; border: 2px solid white;"></div>
+                                    <div style="font-size: 0.85rem; color: var(--secondary-color); margin-bottom: 4px;">Nov 23, 2025</div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 5px;">New Assessment</h4>
+                                    <p style="color: #475569; font-size: 0.95rem;">Conducted initial needs assessment for Maricel Garcia.</p>
+                                </div>
+
+                                <div class="timeline-item" style="position: relative;">
+                                    <div style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; background: #cbd5e1; border-radius: 50%; border: 2px solid white;"></div>
+                                    <div style="font-size: 0.85rem; color: var(--secondary-color); margin-bottom: 4px;">Nov 21, 2025</div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 5px;">Home Visit Report</h4>
+                                    <p style="color: #475569; font-size: 0.95rem;">Submitted quarterly home visit report for Roberto Garcia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+.bg-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: white;
+    overflow: hidden;
+}
+
+.bg-anim-layer-1::after,
+.bg-anim-layer-2::after,
+.bg-anim-layer-3::after,
+.bg-anim-layer-4::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    content: '.';
+    font-size: 52px;
+    color: transparent;
+    mix-blend-mode: multiply;
+    animation: move infinite ease-in-out alternate;
+}
+
+.bg-anim-layer-1::after {
+    animation-duration: 44s;
+    animation-delay: -27s;
+    text-shadow: 1.87em 0.18em 7px hsla(210, 100%, 50%, 0.9), 0.10em 0.66em 7px hsla(210, 100%, 50%, 0.9), 0.44em -0.39em 7px hsla(210, 100%, 50%, 0.9), 2.12em 2.11em 7px hsla(210, 100%, 50%, 0.9), 1.37em 1.51em 7px hsla(210, 100%, 50%, 0.9), 2.21em 2.42em 7px hsla(210, 100%, 50%, 0.9), 1.88em 1.29em 7px hsla(210, 100%, 50%, 0.9), 0.67em 0.62em 7px hsla(210, 100%, 50%, 0.9), 1.45em 2.27em 7px hsla(210, 100%, 50%, 0.9), 1.94em 0.78em 7px hsla(210, 100%, 50%, 0.9);
+}
+
+.bg-anim-layer-2::after {
+    animation-duration: 43s;
+    animation-delay: -32s;
+    text-shadow: 1.41em -0.23em 7px hsla(210, 100%, 50%, 0.9), -0.30em 0.72em 7px hsla(210, 100%, 50%, 0.9), 1.06em 1.17em 7px hsla(210, 100%, 50%, 0.9), 0.81em 0.90em 7px hsla(210, 100%, 50%, 0.9), 1.30em 2.41em 7px hsla(210, 100%, 50%, 0.9), -0.13em 0.88em 7px hsla(210, 100%, 50%, 0.9), -0.44em 2.03em 7px hsla(210, 100%, 50%, 0.9), 1.59em 1.68em 7px hsla(210, 100%, 50%, 0.9), 1.21em 1.53em 7px hsla(210, 100%, 50%, 0.9), 2.28em 0.28em 7px hsla(210, 100%, 50%, 0.9);
+}
+
+.bg-anim-layer-3::after {
+    animation-duration: 42s;
+    animation-delay: -23s;
+    text-shadow: 1.13em 1.39em 7px hsla(210, 100%, 50%, 0.9), 1.15em 2.23em 7px hsla(210, 100%, 50%, 0.9), 0.91em 2.07em 7px hsla(210, 100%, 50%, 0.9), 1.76em 0.03em 7px hsla(210, 100%, 50%, 0.9), 0.78em -0.37em 7px hsla(210, 100%, 50%, 0.9), 0.44em 1.37em 7px hsla(210, 100%, 50%, 0.9), 2.12em 2.17em 7px hsla(210, 100%, 50%, 0.9), -0.23em 0.54em 7px hsla(210, 100%, 50%, 0.9), 1.90em 0.35em 7px hsla(210, 100%, 50%, 0.9), 0.17em 0.67em 7px hsla(210, 100%, 50%, 0.9);
+}
+
+.bg-anim-layer-4::after {
+    animation-duration: 41s;
+    animation-delay: -19s;
+    text-shadow: 2.24em 1.78em 7px hsla(210, 100%, 50%, 0.9), -0.49em 1.88em 7px hsla(210, 100%, 50%, 0.9), 0.33em 1.78em 7px hsla(210, 100%, 50%, 0.9), 1.11em -0.10em 7px hsla(210, 100%, 50%, 0.9), -0.01em 2.34em 7px hsla(210, 100%, 50%, 0.9), 1.05em 1.54em 7px hsla(210, 100%, 50%, 0.9), 1.71em 1.98em 7px hsla(210, 100%, 50%, 0.9), 0.43em -0.49em 7px hsla(210, 100%, 50%, 0.9), 0.05em 1.38em 7px hsla(210, 100%, 50%, 0.9), 2.33em 0.55em 7px hsla(210, 100%, 50%, 0.9);
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0deg) scale(12) translateX(-20px);
+    }
+
+    to {
+        transform: rotate(360deg) scale(18) translateX(20px);
+    }
+}
+

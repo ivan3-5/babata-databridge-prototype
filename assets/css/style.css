@@ -163,6 +163,17 @@ ul {
     letter-spacing: -0.02em;
 }
 
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
 .hero p {
     font-size: 1.25rem;
     color: var(--secondary-color);
@@ -1529,4 +1540,121 @@ input:checked+.slider:before {
 .chart-label {
     font-size: 0.8rem;
     color: var(--secondary-color);
+}
+
+/* Auth Split Layout */
+.auth-split-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-left-panel {
+    flex: 1;
+    background: transparent;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-left-panel::before {
+    content: none;
+}
+
+.auth-left-content {
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+}
+
+.auth-left-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.auth-left-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.auth-page-indicator {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.auth-right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+}
+
+.auth-right-content {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* Adjust existing auth card styles for split layout */
+.auth-split-layout .auth-card {
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    border: none;
+}
+
+.auth-split-layout .auth-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.auth-split-layout .auth-header h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.auth-split-layout .auth-header .logo {
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+
+.auth-split-layout .auth-header .logo .logo-text {
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .auth-split-layout {
+        flex-direction: column;
+    }
+
+    .auth-left-panel {
+        padding: 40px;
+        flex: 0 0 auto;
+        min-height: 300px;
+    }
+
+    .auth-right-panel {
+        padding: 40px 20px;
+        flex: 1 0 auto;
+    }
 }
