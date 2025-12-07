@@ -53,9 +53,48 @@
                     <a href="auth/signup.html" class="btn btn-primary">Start Free Trial</a>
                     <a href="#features" class="btn btn-secondary">View Features</a>
                 </div>
-                <div class="hero-image" style="margin-top: 60px;">
-                    <img src="assets/images/sample.png" alt="Dashboard Preview"
-                        style="max-width: 100%; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.5);">
+                <div class="carousel-3d-container" style="margin-top: 60px;">
+                    <input type="radio" name="carousel" id="c1" checked>
+                    <input type="radio" name="carousel" id="c2">
+                    <input type="radio" name="carousel" id="c3">
+                    <input type="radio" name="carousel" id="c4">
+                    <input type="radio" name="carousel" id="c5">
+                    <input type="radio" name="carousel" id="c6">
+
+                    <div class="carousel-3d-inner">
+                        <div class="c3d-slide" id="slide1"><img src="assets/images/samples/sample-1.png" alt="Dashboard Preview 1"></div>
+                        <div class="c3d-slide" id="slide2"><img src="assets/images/samples/sample-2.png" alt="Dashboard Preview 2"></div>
+                        <div class="c3d-slide" id="slide3"><img src="assets/images/samples/sample-3.png" alt="Dashboard Preview 3"></div>
+                        <div class="c3d-slide" id="slide4"><img src="assets/images/samples/sample-4.png" alt="Dashboard Preview 4"></div>
+                        <div class="c3d-slide" id="slide5"><img src="assets/images/samples/sample-5.png" alt="Dashboard Preview 5"></div>
+                        <div class="c3d-slide" id="slide6"><img src="assets/images/samples/sample-6.png" alt="Dashboard Preview 6"></div>
+                    </div>
+
+                    <div class="c3d-controls">
+                        <!-- Controls for State 1 -->
+                        <label for="c6" class="nav-btn prev-btn state-1">‹</label>
+                        <label for="c2" class="nav-btn next-btn state-1">›</label>
+
+                        <!-- Controls for State 2 -->
+                        <label for="c1" class="nav-btn prev-btn state-2">‹</label>
+                        <label for="c3" class="nav-btn next-btn state-2">›</label>
+
+                        <!-- Controls for State 3 -->
+                        <label for="c2" class="nav-btn prev-btn state-3">‹</label>
+                        <label for="c4" class="nav-btn next-btn state-3">›</label>
+
+                        <!-- Controls for State 4 -->
+                        <label for="c3" class="nav-btn prev-btn state-4">‹</label>
+                        <label for="c5" class="nav-btn next-btn state-4">›</label>
+
+                        <!-- Controls for State 5 -->
+                        <label for="c4" class="nav-btn prev-btn state-5">‹</label>
+                        <label for="c6" class="nav-btn next-btn state-5">›</label>
+
+                        <!-- Controls for State 6 -->
+                        <label for="c5" class="nav-btn prev-btn state-6">‹</label>
+                        <label for="c1" class="nav-btn next-btn state-6">›</label>
+                    </div>
                 </div>
             </div>
         </section>
@@ -102,6 +141,21 @@
                         <h3>Impact Reporting</h3>
                         <p>Visualize aid distribution flows and generate actionable insights with our built-in real-time
                             dashboarding tools.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><img src="assets/icons/refresh-cw.svg" class="icon"></div>
+                        <h3>Real-time Synchronization</h3>
+                        <p>Keep field teams and HQ in sync with automatic data replication and conflict resolution.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><img src="assets/icons/file-text.svg" class="icon"></div>
+                        <h3>Document Management</h3>
+                        <p>Securely store and organize beneficiary documents, ID scans, and consent forms.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><img src="assets/icons/settings.svg" class="icon"></div>
+                        <h3>Customizable Workflows</h3>
+                        <p>Adapt the platform to your specific program needs with flexible form builders and process automation.</p>
                     </div>
                 </div>
             </div>

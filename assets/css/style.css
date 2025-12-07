@@ -1788,3 +1788,246 @@ input:checked+.slider:before {
         box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
     }
 }
+
+/* =========================================
+   Image Carousel Styles
+   ========================================= */
+.hero-carousel-container {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 100%;
+}
+
+/* =========================================
+   3D Interactive Carousel
+   ========================================= */
+.carousel-3d-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 600px;
+    /* Adjust based on image aspect ratio */
+    margin: 0 auto;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide Radio Buttons */
+.carousel-3d-container input {
+    display: none;
+}
+
+.carousel-3d-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.c3d-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+    /* Main slide width */
+    height: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s 0.5s;
+    opacity: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    /* Allow clicking through to arrows if needed */
+}
+
+.c3d-slide img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Active Slide (Center) */
+#c1:checked~.carousel-3d-inner #slide1,
+#c2:checked~.carousel-3d-inner #slide2,
+#c3:checked~.carousel-3d-inner #slide3,
+#c4:checked~.carousel-3d-inner #slide4,
+#c5:checked~.carousel-3d-inner #slide5,
+#c6:checked~.carousel-3d-inner #slide6 {
+    opacity: 1;
+    z-index: 3;
+    transform: translateX(0) scale(1);
+    pointer-events: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s;
+}
+
+/* Next Slide (Right) */
+#c1:checked~.carousel-3d-inner #slide2,
+#c2:checked~.carousel-3d-inner #slide3,
+#c3:checked~.carousel-3d-inner #slide4,
+#c4:checked~.carousel-3d-inner #slide5,
+#c5:checked~.carousel-3d-inner #slide6,
+#c6:checked~.carousel-3d-inner #slide1 {
+    opacity: 0.6;
+    z-index: 2;
+    transform: translateX(40%) scale(0.8);
+}
+
+/* Previous Slide (Left) */
+#c1:checked~.carousel-3d-inner #slide6,
+#c2:checked~.carousel-3d-inner #slide1,
+#c3:checked~.carousel-3d-inner #slide2,
+#c4:checked~.carousel-3d-inner #slide3,
+#c5:checked~.carousel-3d-inner #slide4,
+#c6:checked~.carousel-3d-inner #slide5 {
+    opacity: 0.6;
+    z-index: 2;
+    transform: translateX(-40%) scale(0.8);
+}
+
+/* Far Next (Hidden Right) */
+#c1:checked~.carousel-3d-inner #slide3,
+#c1:checked~.carousel-3d-inner #slide4,
+#c2:checked~.carousel-3d-inner #slide4,
+#c2:checked~.carousel-3d-inner #slide5,
+#c3:checked~.carousel-3d-inner #slide5,
+#c3:checked~.carousel-3d-inner #slide6,
+#c4:checked~.carousel-3d-inner #slide6,
+#c4:checked~.carousel-3d-inner #slide1,
+#c5:checked~.carousel-3d-inner #slide1,
+#c5:checked~.carousel-3d-inner #slide2,
+#c6:checked~.carousel-3d-inner #slide2,
+#c6:checked~.carousel-3d-inner #slide3 {
+    transform: translateX(80%) scale(0.6);
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Far Prev (Hidden Left) */
+#c1:checked~.carousel-3d-inner #slide5,
+#c2:checked~.carousel-3d-inner #slide6,
+#c3:checked~.carousel-3d-inner #slide1,
+#c4:checked~.carousel-3d-inner #slide2,
+#c5:checked~.carousel-3d-inner #slide3,
+#c6:checked~.carousel-3d-inner #slide4 {
+    transform: translateX(-80%) scale(0.6);
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Navigation Buttons */
+.c3d-controls .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 24px;
+    display: none;
+    /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.c3d-controls .nav-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Show controls based on state */
+#c1:checked~.c3d-controls .state-1,
+#c2:checked~.c3d-controls .state-2,
+#c3:checked~.c3d-controls .state-3,
+#c4:checked~.c3d-controls .state-4,
+#c5:checked~.c3d-controls .state-5,
+#c6:checked~.c3d-controls .state-6 {
+    display: flex;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-3d-container {
+        height: 250px;
+    }
+
+    .c3d-slide {
+        width: 80%;
+    }
+
+    /* Adjust transforms for smaller screens if needed */
+    #c1:checked~.carousel-3d-inner #slide2,
+    #c2:checked~.carousel-3d-inner #slide3,
+    #c3:checked~.carousel-3d-inner #slide4,
+    #c4:checked~.carousel-3d-inner #slide5,
+    #c5:checked~.carousel-3d-inner #slide6,
+    #c6:checked~.carousel-3d-inner #slide1 {
+        transform: translateX(15%) scale(0.8);
+        opacity: 0;
+        /* Hide side images on mobile for cleaner look, or keep them */
+    }
+
+    #c1:checked~.carousel-3d-inner #slide6,
+    #c2:checked~.carousel-3d-inner #slide1,
+    #c3:checked~.carousel-3d-inner #slide2,
+    #c4:checked~.carousel-3d-inner #slide3,
+    #c5:checked~.carousel-3d-inner #slide4,
+    #c6:checked~.carousel-3d-inner #slide5 {
+        transform: translateX(-15%) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   Feature Highlights (Enhanced)
+   ========================================= */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.3);
+}
